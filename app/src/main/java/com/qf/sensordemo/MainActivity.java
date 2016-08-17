@@ -13,6 +13,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
+
     private SensorManager manager;
     private List<Sensor> sensors;
 
@@ -24,19 +25,7 @@ public class MainActivity extends AppCompatActivity {
         //获得传感器管理对象
         manager = (SensorManager) getSystemService(SENSOR_SERVICE);
         Sensor sensor = manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        //传感器监听器
-        SensorEventListener listener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent event) {
 
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-            }
-        };
-        manager.registerListener(listener, sensor, SensorManager.SENSOR_DELAY_GAME);
     }
 
     private void logSensor() {
