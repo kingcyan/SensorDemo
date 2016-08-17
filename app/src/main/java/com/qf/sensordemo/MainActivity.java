@@ -12,6 +12,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private SensorManager manager;
     private List<Sensor> sensors;
 
